@@ -1,12 +1,16 @@
 <?php
 namespace app\models;
+use yii\base\Model;
 
-use yii\db\ActiveRecord;
-
-class Message extends ActiveRecord
+class Message extends Model
 {
-    public static function tableName()
+    public $id;
+    public $text;
+
+    public function rules()
     {
-        return 'message';
+        return [
+            [['text'], 'required'],
+        ];
     }
 }
