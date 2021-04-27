@@ -42,4 +42,5 @@ class MessageController extends Controller
         ->queryAll();
         return $this->render('show-messages', ['messages' => $messages]);
     }
+    
 }
